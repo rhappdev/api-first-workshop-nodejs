@@ -19,10 +19,6 @@ app.use(cls.setRequestId);
 app.use(inOutLogger);
 
 initSwaggerMiddlware(app, resolve(__dirname), () => {
-  // self.express.use('/api/weather', helloRouteBuilder);
-  // self.express.use(bodyParser.json());
-  // self.express.use(bodyParser.urlencoded({ extended: false }));
-  // Custom error handler that returns JSON
   app.use(function (err, req: express.Request, res: express.Response, next) {
     if (err) {
       const errStr = err.message || err.toString();
