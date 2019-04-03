@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import promClient = require("prom-client");
+import * as promClient from "prom-client";
 import "../middlewares/swagger";
 const responseTime = new promClient.Gauge({
   name: "last_response_time",
