@@ -9,7 +9,7 @@ declare module "express" {
         requestId: string;
     }
 }
-const isProd = (process.env.NODE_ENV === "production");
+
 function loadDocumentSync(file: string): any {
     return YAML.load(readFileSync(file));
 }
