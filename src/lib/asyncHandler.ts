@@ -2,7 +2,7 @@ import * as express from "express";
 import * as P from "bluebird";
 import log from "../log";
 import { TDebug } from "../log";
-const debug = new TDebug("src:lib:asyncHandler");
+const debug = new TDebug("nodejs:src:lib:asyncHandler");
 export interface HandlerOption {
   cache?: boolean;
   cacheLive?: number;
