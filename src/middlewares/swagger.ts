@@ -19,7 +19,7 @@ export const initSwaggerMiddlware = function (app: express.Express, basePath: st
         controllers: basePath + "/routes",
         loglevel: "debug",
         strict: true,
-        router: false,
+        router: true,
         validator: true,
         docs: {
             apiDocs: "/api-docs",
