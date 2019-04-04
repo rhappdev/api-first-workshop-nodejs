@@ -16,7 +16,6 @@ export class ItemDAO {
   private constructor() {}
 
   public getItems(): Item[] {
-    console.log(this.items);
     return this.items;
   }
 
