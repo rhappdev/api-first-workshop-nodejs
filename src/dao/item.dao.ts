@@ -2,7 +2,7 @@ import { Item } from "../models/item";
 import * as uuid from "node-uuid";
 import * as _ from "lodash";
 
- export class ItemDAO {
+export class ItemDAO {
   public static getInstance() {
     if (!ItemDAO.instance) {
       ItemDAO.instance = new ItemDAO();
@@ -37,4 +37,4 @@ import * as _ from "lodash";
     this.items = _.filter(this.items, function(item) { return item.id !== id; });
   }
 
- }
+}
