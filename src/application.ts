@@ -1,5 +1,5 @@
 
-// import * as bodyParser from "body-parser";
+import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import * as express from "express";
 import { resolve } from "path";
@@ -17,6 +17,7 @@ monit.init(app);
 app.use(cors(getCorsOptions()));
 app.use(cls.setRequestId);
 app.use(inOutLogger);
+app.use(bodyParser.json());
 
 initSwaggerMiddlware(app, resolve(__dirname), () => {
   app.use(function (err, req: express.Request, res: express.Response, next) {
